@@ -91,6 +91,12 @@ public class Form_estu extends javax.swing.JInternalFrame {
             }
         });
 
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+
         cboAsignatura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "POO", "BASE DATOS", "REDES", "FISICA" }));
         cboAsignatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,9 +131,9 @@ public class Form_estu extends javax.swing.JInternalFrame {
                                     .addComponent(cboAsignatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(cboEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
+                        .addGap(103, 103, 103)
                         .addComponent(btnGuardar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnEliminar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnActualizar)))
@@ -163,7 +169,7 @@ public class Form_estu extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(cboEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnEliminar)
@@ -255,6 +261,7 @@ public class Form_estu extends javax.swing.JInternalFrame {
          JOptionPane.showMessageDialog(null,"Error al mostrar los datos"+e);
      }
     }
+    
     public void limpiarDatos(){
         txtApellido.setText("");
         txtNombre.setText("");
@@ -392,7 +399,7 @@ public class Form_estu extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_cboAsignaturaActionPerformed
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
-        // TODO add your handling code here:
+         // TODO add your handling code here:
         limpiarDatos();
     }//GEN-LAST:event_btnNuevoActionPerformed
 
@@ -410,6 +417,10 @@ public class Form_estu extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         eliminarDatos();
     }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
 
     /**
      * @param args the command line arguments
