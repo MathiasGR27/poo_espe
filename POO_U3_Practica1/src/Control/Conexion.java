@@ -14,16 +14,16 @@ import javax.swing.JOptionPane;
  */
 public class Conexion {
     
-    private static final String drive="Com.mysql.jdbc.Drive";
+    private static final String driver="com.mysql.jdbc.Driver";
     private static final String user="root";
     private static final String pass="";
-     private static final String url="jdbcmysql://localhost:3306/estudiante";
+    private static final String url="jdbc:mysql://localhost:3306/estudiantes";
      
     Connection conectar = null;
     
     public Connection conexion(){
         try{
-            Class.forName(drive);
+            Class.forName(driver);
             conectar=(Connection) DriverManager.getConnection(url,user,pass);
         }catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Error de conexion"+e.getMessage());
